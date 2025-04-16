@@ -49,3 +49,30 @@
       padding: 0.5rem;
     }
   }
+
+
+  :root {
+    --primary-color: #333;
+    --text-color: white;
+    --padding: 1rem;
+  }
+  header {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+  }
+  nav a {
+    color: var(--text-color);
+  }
+
+
+  nav a:focus {
+    outline: 2px solid var(--text-color);
+  }
+
+  section {
+    transition: background 0.3s;
+  }
+  section:hover {
+    background: #f0f0f0;
+  }
