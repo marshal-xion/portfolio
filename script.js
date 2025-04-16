@@ -16,3 +16,12 @@ button.addEventListener("click", () => {
       ? "Hello, world!"
       : "This is my portfolio.";
 });
+
+
+const skills = ["HTML", "CSS", "JavaScript"];
+const skillsList = document.querySelector("#skills-list");
+skills.forEach((skill) => {
+  const li = document.createElement("li");
+  li.textContent = skill;
+  skillsList.appendChild(li);
+});
