@@ -5,36 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
-  <header>
-    <h1>Bishnu</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <header class="bg-gray-800 text-white p-4 text-center">
+    <h1>Dev</h1>
+    <nav class="flex justify-center gap-4">
+      <ul class="flex gap-4">
+        <li><a href="#home" class="text-white hover:text-gray-300">Home</a></li>
+        <li><a href="#about" class="text-white hover:text-gray-300">About</a></li>
+        <li><a href="#contact" class="text-white hover:text-gray-300">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
 
     <nav role="navigation">
     <main role="main">
 
-    <section id="home">
+    <section id="home" class="p-4 border border-gray-200 rounded">
       <h2>Welcome</h2>
       <p>This is my portfolio.</p>
       <button id="toggle">Toggle Message</button>
     </section>
 
-    <section id="about">
+    <section id="about" class="p-4 border border-gray-200 rounded">
       <h2>About Me</h2>
       <p>I'm a web developer learning modern tech.</p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="p-4 border border-gray-200 rounded">
       <h2>Skills</h2>
       <ul id="skills-list"></ul>
     </section>
