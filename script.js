@@ -25,3 +25,21 @@ skills.forEach((skill) => {
   li.textContent = skill;
   skillsList.appendChild(li);
 });
+
+
+const form = document.querySelector("#contact-form");
+const message = document.querySelector("#form-message");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  if (name && email) {
+    message.textContent = `Thanks, ${name}! We'll email you at ${email}.`;
+    message.classList.add("text-green-500");
+    form.reset();
+  } else {
+    message.textContent = "Please fill out all fields.";
+    message.classList.add("text-red-500");
+  }
+});
