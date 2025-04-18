@@ -35,6 +35,8 @@
     padding: 2rem;
   }
 
+
+
   footer {
     display: flex;
     justify-content: center;
@@ -75,4 +77,22 @@
   }
   section:hover {
     background: #f0f0f0;
+  }
+
+  section {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+  }
+  @media (max-width: 600px) {
+    main {
+      grid-template-columns: 1fr;
+    }
   }
