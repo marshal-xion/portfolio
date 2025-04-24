@@ -19,8 +19,9 @@ button.addEventListener("click", () => {
 
 
 const skills = ["HTML", "CSS", "JavaScript"];
+const newSkills = [...skills, "Tailwind"];
 const skillsList = document.querySelector("#skills-list");
-skills.forEach((skill) => {
+newSkills.forEach((skill) => {
   const li = document.createElement("li");
   li.textContent = skill;
   skillsList.appendChild(li);
@@ -32,8 +33,8 @@ const message = document.querySelector("#form-message");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const name = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
+  const { value: name } = document.querySelector("#name");
+  const { value: email } = document.querySelector("#email");
   if (name && email) {
     message.textContent = `Thanks, ${name}! We'll email you at ${email}.`;
     message.classList.add("text-green-500");
@@ -43,3 +44,10 @@ form.addEventListener("submit", (e) => {
     message.classList.add("text-red-500");
   }
 });
+
+
+const user = { name: "Your Name", email: "you@example.com" };
+const { name, email } = user;
+console.log(`User: ${name}, Email: ${email}`);
+
+
