@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <header class="bg-gray-800 text-white p-4 text-center">
+  <header class="bg-gray-800 text-white p-6 text-center shadow-md">
     <h1>Dev</h1>
     <nav class="flex justify-center gap-4">
       <ul class="flex gap-4">
@@ -19,7 +19,7 @@
       </ul>
     </nav>
   </header>
-  <main class="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
+  <main class="grid grid-cols-1 md:grid-cols-2 gap-6 p-10 max-w-6xl mx-auto">
 
     <nav role="navigation">
     <main role="main">
@@ -37,18 +37,19 @@
 
     <section id="skills" class="p-4 border border-gray-200 rounded">
       <h2>Skills</h2>
-      <ul id="skills-list"></ul>
+      <ul id="skills-list" class="flex flex-col gap-2">
     </section>
 
 
     <section id="contact" class="p-4 border border-gray-200 rounded">
-      <h2>Contact Me</h2>
-      <form id="contact-form" class="flex flex-col gap-4">
+
+      <form id="contact-form" class="flex flex-col gap-4" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
         <label for="name">Name:</label>
         <input type="text" id="name" class="p-2 border rounded" required>
         <label for="email">Email:</label>
         <input type="email" id="email" class="p-2 border rounded" required>
-        <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button>
+        <button type="submit" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition" aria-label="Submit contact form"> Submit </button>
       </form>
       <p id="form-message" class="mt-2 text-green-500"></p>
     </section>

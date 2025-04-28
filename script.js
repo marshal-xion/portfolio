@@ -25,13 +25,13 @@ const skillsList = document.querySelector("#skills-list");
 updateSkills(skills, skillsList);
 
 
-const newSkills = [...skills, "Tailwind"];
+/* const newSkills = [...skills, "Tailwind"];
 ;
 newSkills.forEach((skill) => {
   const li = document.createElement("li");
   li.textContent = skill;
   skillsList.appendChild(li);
-});
+}); */
 
 
 const form = document.querySelector("#contact-form");
