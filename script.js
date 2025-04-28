@@ -1,3 +1,4 @@
+
 const greeting = "Welcome to my portfolio!";
 console.log(greeting);
 
@@ -18,9 +19,14 @@ button.addEventListener("click", () => {
 });
 
 
-const skills = ["HTML", "CSS", "JavaScript"];
-const newSkills = [...skills, "Tailwind"];
+import { updateSkills } from "./utils.js";
+const skills = ["HTML", "CSS", "JavaScript", "Tailwind"];
 const skillsList = document.querySelector("#skills-list");
+updateSkills(skills, skillsList);
+
+
+const newSkills = [...skills, "Tailwind"];
+;
 newSkills.forEach((skill) => {
   const li = document.createElement("li");
   li.textContent = skill;
