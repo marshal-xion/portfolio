@@ -1,39 +1,16 @@
+import { updateSkills } from "./utils.js";
 
-const greeting = "Welcome to my portfolio!";
-console.log(greeting);
-
-const updateHeader = () => {
-    const header = document.querySelector("h1");
-    header.textContent = "Hi, I'm a Dev!";
-  };
-  updateHeader();
-
-
+// Toggle message functionality
 const button = document.querySelector("#toggle");
 button.addEventListener("click", () => {
-  const message = document.querySelector("p");
+  const message = document.querySelector("#home p");
   message.textContent =
     message.textContent === "This is my portfolio."
       ? "Hello, world!"
       : "This is my portfolio.";
 });
 
-
-import { updateSkills } from "./utils.js";
-const skills = ["HTML", "CSS", "JavaScript", "Tailwind"];
-const skillsList = document.querySelector("#skills-list");
-updateSkills(skills, skillsList);
-
-
-/* const newSkills = [...skills, "Tailwind"];
-;
-newSkills.forEach((skill) => {
-  const li = document.createElement("li");
-  li.textContent = skill;
-  skillsList.appendChild(li);
-}); */
-
-
+// Form validation
 const form = document.querySelector("#contact-form");
 const message = document.querySelector("#form-message");
 
@@ -51,9 +28,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-
-const user = { name: "Your Name", email: "you@example.com" };
-const { name, email } = user;
-console.log(`User: ${name}, Email: ${email}`);
-
-
+// Initialize skills list
+const skills = ["HTML", "CSS", "JavaScript", "Tailwind"];
+const skillsList = document.querySelector("#skills-list");
+updateSkills(skills, skillsList);
