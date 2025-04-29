@@ -32,3 +32,29 @@ form.addEventListener("submit", (e) => {
 const skills = ["HTML", "CSS", "JavaScript", "Tailwind"];
 const skillsList = document.querySelector("#skills-list");
 updateSkills(skills, skillsList);
+
+
+const mockFetch = () => new Promise((resolve) => {
+  setTimeout(() => resolve("Data loaded!"), 1000);
+});
+mockFetch().then((data) => console.log(data));
+
+
+const mockFetch1 = (success = true) => new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (success) resolve("Data loaded with async!");
+    else reject("Error fetching data");
+  }, 1000);
+});
+async function loadData() {
+  try {
+    const data = await mockFetch1(true); // this will resolve
+    console.log(data);
+/*     const data1 = await mockFetch1(false); // this will reject
+    // The following line will not be executed if the previous line throws an error
+    console.log(data1); */
+  } catch (error) {
+    console.error(error);
+  }
+}
+loadData();
