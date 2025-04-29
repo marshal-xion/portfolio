@@ -1,4 +1,6 @@
 import { updateSkills } from "./utils.js";
+import { fetchProjects } from "./projects.js";
+
 
 // Toggle message functionality
 const button = document.querySelector("#toggle");
@@ -58,3 +60,22 @@ async function loadData() {
   }
 }
 loadData();
+
+
+/* async function fetchPosts() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=3");
+    const posts = await response.json();
+    console.log(posts);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+}
+fetchPosts(); */
+
+
+async function initProjects() {
+  const projects = await fetchProjects();
+  console.log("Projects:", projects);
+}
+initProjects();
