@@ -11,3 +11,17 @@ export const fetchProjects = async () => {
       return [];
     }
   };
+
+
+  export const renderProjects = (projects, container) => {
+    container.innerHTML = "";
+    projects.forEach((project) => {
+      const card = document.createElement("div");
+      card.classList.add("p-4", "bg-white", "rounded", "shadow", "hover:shadow-lg", "transition");
+      card.innerHTML = `
+        <h3 class="text-lg font-semibold">${project.title}</h3>
+        <p class="text-gray-600">${project.description}</p>
+      `;
+      container.appendChild(card);
+    });
+  };

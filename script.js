@@ -1,5 +1,5 @@
 import { updateSkills } from "./utils.js";
-import { fetchProjects } from "./projects.js";
+import { fetchProjects, renderProjects } from "./projects.js";
 
 
 // Toggle message functionality
@@ -74,8 +74,15 @@ loadData();
 fetchPosts(); */
 
 
-async function initProjects() {
+/* async function initProjects() {
   const projects = await fetchProjects();
   console.log("Projects:", projects);
+}
+initProjects(); */
+
+async function initProjects() {
+  const projects = await fetchProjects();
+  const projectsList = document.querySelector("#projects-list");
+  renderProjects(projects, projectsList);
 }
 initProjects();
