@@ -5,37 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header class="bg-gray-800 text-white p-6 text-center shadow-md">
     <h1>Noob</h1>
     <nav role="navigation" class="flex justify-center gap-4">
       <ul class="flex gap-4">
-        <li><a href="#home" class="text-white hover:text-gray-300">Home</a></li>
-        <li><a href="#about" class="text-white hover:text-gray-300">About</a></li>
-        <li><a href="#contact" class="text-white hover:text-gray-300">Contact</a></li>
+        <li><a href="#home" class="text-white hover:text-gray-300 transition-colors duration-200">Home</a></li>
+        <li><a href="#about" class="text-white hover:text-gray-300 transition-colors duration-200">About</a></li>
+        <li><a href="#contact" class="text-white hover:text-gray-300E3 transition-colors duration-200">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main role="main" class="grid grid-cols-1 md:grid-cols-2 gap-6 p-10 max-w-6xl mx-auto bg-gray-50">
-    <section id="home" class="p-4 border border-gray-200 rounded">
+    <section id="home" class="p-4 border border-gray-200 rounded animate-fade-in">
       <h2>Welcome</h2>
       <p>This is my portfolio.</p>
       <button id="toggle" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Toggle Message</button>
     </section>
-    <section id="about" class="p-4 border border-gray-200 rounded">
+    <section id="about" class="p-4 border border-gray-200 rounded animate-fade-in">
       <h2>About Me</h2>
       <p>I'm a web developer learning modern tech.</p>
     </section>
-    <section id="skills" class="p-4 border border-gray-200 rounded">
+    <section id="skills" class="p-4 border border-gray-200 rounded animate-fade-in">
       <h2>Skills</h2>
       <ul id="skills-list" class="flex flex-col gap-2"></ul>
     </section>
-    <section id="projects" class="p-4 border border-gray-200 rounded">
+    <section id="projects" class="p-4 border border-gray-200 rounded animate-fade-in">
       <h2>Projects</h2>
       <div id="projects-list" class="grid grid-cols-1 gap-4"></div>
     </section>
-    <section id="contact" class="p-4 border border-gray-200 rounded">
+    <section id="contact" class="p-4 border border-gray-200 rounded animate-fade-in">
       <h2 id="contact-heading">Contact Me</h2>
       <form id="contact-form" class="flex flex-col gap-4" aria-labelledby="contact-heading">
         <label for="name">Name:</label>
