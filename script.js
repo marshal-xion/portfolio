@@ -1,4 +1,3 @@
-import { updateSkills } from "./utils.js";
 import { fetchProjects, renderProjects } from "./projects.js";
 
 // Toggle message functionality
@@ -28,8 +27,6 @@ form.addEventListener("submit", (e) => {
     message.classList.add("text-red-500");
   }
 });
-
-
 
 // Initialize projects
 async function initProjects() {

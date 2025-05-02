@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <script defer src="/static/[react-js-file].js"></script>
+  <script defer src="https://cdn.tailwindcss.com"></script>
+  <script defer src="/static/skills.js"></script>
   <style>
     .animate-fade-in {
       animation: fadeIn 0.5s ease-in;
@@ -15,7 +16,6 @@
     }
   </style>
 </head>
-<div id="react-skills"></div>
 <body>
   <header class="bg-gray-800 text-white p-6 text-center shadow-md">
     <h1>Your Name</h1>
@@ -37,10 +37,10 @@
       <h2>About Me</h2>
       <p>I'm a web developer learning modern tech.</p>
     </section>
-    <section id="skills" class="p-4 border border-gray-200 rounded">
+    <section id="skills" class="p-4 border border-gray-200 rounded animate-fade-in">
       <div id="react-skills"></div>
     </section>
-    <section id="projects" class="p-4 border border-gray-200 rounded col-span-1 md:col-span-2">
+    <section id="projects" class="p-4 border border-gray-200 rounded animate-fade-in col-span-1 md:col-span-2">
       <h2>Projects</h2>
       <div id="projects-list" class="grid grid-cols-1 gap-4"></div>
     </section>
