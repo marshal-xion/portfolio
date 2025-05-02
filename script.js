@@ -29,10 +29,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// Initialize skills list
-const skills = ["HTML", "CSS", "JavaScript", "Tailwind"];
-const skillsList = document.querySelector("#skills-list");
-updateSkills(skills, skillsList);
+
 
 // Initialize projects
 async function initProjects() {
